@@ -1,8 +1,11 @@
 require 'sinatra'
 require 'date'
 
+
+def day_of_week(time)
+  return Date::DAYNAMES[time.wday]
+end
+
 get '/' do
-  #print("hello, world!")
-  today = Date::DAYNAMES[Time.now.wday]
-  "happy #{today}"
+  "Hello world!, Happy #{day_of_week(Time.now)}"
 end
