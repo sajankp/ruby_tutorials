@@ -22,7 +22,7 @@ p imperative_urls(states)
 
 #functional
 def functional_url(states)
-  states.map {|state| urlify(state)} .map {|state| addressify(state)}
+  states.map {|state| urlify(state)}.map {|state| addressify(state)}
 end
 
 p functional_url(states)
